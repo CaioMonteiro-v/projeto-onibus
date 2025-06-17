@@ -116,3 +116,51 @@
     gap: 0;
   }
 }
+
+
+.dados-cliente {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #3498db;
+}
+
+.dados-cliente h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.pix-box {
+  text-align: center;
+  padding: 15px;
+  background: #f0f8ff;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.pix-box .qr-code {
+  margin: 15px auto;
+  display: block;
+  border: 1px solid #ddd;
+}
+
+/* Validação de campos */
+input:invalid {
+  border-color: #ff6b6b;
+}
+
+input:valid {
+  border-color: #51cf66;
+}

@@ -14,6 +14,27 @@
       <div class="pagamento-resumo" id="resumo">
         <!-- Resumo da compra será inserido via JS -->
       </div>
+      
+      <div class="dados-cliente">
+        <h3>Dados do Passageiro</h3>
+        <div class="form-group">
+          <label for="nome-cliente">Nome Completo:</label>
+          <input type="text" id="nome-cliente" required>
+        </div>
+        <div class="form-group">
+          <label for="cpf-cliente">CPF:</label>
+          <input type="text" id="cpf-cliente" required 
+                 pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                 placeholder="000.000.000-00">
+        </div>
+        <div class="form-group">
+          <label for="telefone-cliente">Telefone:</label>
+          <input type="tel" id="telefone-cliente" required 
+                 pattern="\(\d{2}\) \d{5}-\d{4}" 
+                 placeholder="(00) 00000-0000">
+        </div>
+      </div>
+      
       <form class="pagamento-form" id="form-pagamento" autocomplete="off">
         <div class="form-group">
           <label for="formaPagamento">Forma de Pagamento:</label>
@@ -29,85 +50,7 @@
       <div id="msg-pagamento"></div>
     </section>
   </main>
-  <script>
-    const dados = JSON.parse(localStorage.getItem('passagem'));
-    const assento = localStorage.getItem('assento');
-    const resumo = document.getElementById('resumo');
-    const infoExtra = document.getElementById('infoExtra');
-    const formPagamento = document.getElementById('form-pagamento');
-    const msgPagamento = document.getElementById('msg-pagamento');
 
-    if (!dados || !assento) {
-      resumo.innerHTML = "<p>Informações da passagem não encontradas.</p>";
-      formPagamento.style.display = "none";
-    } else {
-      resumo.innerHTML = `
-        <p><strong>Origem:</strong> ${dados.origem}</p>
-        <p><strong>Destino:</strong> ${dados.destino}</p>
-        <p><strong>Data:</strong> ${dados.data} - ${dados.horario}</p>
-        <p><strong>Empresa:</strong> ${dados.empresa}</p>
-        <p><strong>Assento:</strong> ${assento}</p>
-        <p><strong>Valor:</strong> R$ ${dados.preco.toFixed(2)}</p>
-      `;
-    }
-
-    function gerarCamposCartao() {
-      return `
-        <div class="form-group">
-          <label>Número do Cartão:</label>
-          <input type="text" maxlength="19" placeholder="0000 0000 0000 0000" required>
-        </div>
-        <div class="form-group">
-          <label>Nome no Cartão:</label>
-          <input type="text" placeholder="Nome completo" required>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Validade:</label>
-            <input type="text" maxlength="5" placeholder="MM/AA" required>
-          </div>
-          <div class="form-group">
-            <label>CVV:</label>
-            <input type="password" maxlength="3" placeholder="123" required>
-          </div>
-        </div>
-      `;
-    }
-
-    document.getElementById('formaPagamento')
-      .addEventListener('change', e => {
-        const forma = e.target.value;
-        if (forma === 'pix') {
-          infoExtra.innerHTML = `
-            <div class="pix-box">
-              <p>Use a chave PIX:</p>
-              <strong>pagamento@sistemamt.com.br</strong>
-              <img src="https://api.qrserver.com/v1/create-qr-code/?data=pagamento@sistemamt.com.br&size=180x180"
-                   class="qr-code" alt="QR Code PIX">
-            </div>
-          `;
-        } else {
-          infoExtra.innerHTML = gerarCamposCartao();
-        }
-      });
-
-    // Dispara para mostrar já ao carregar
-    document.getElementById('formaPagamento')
-      .dispatchEvent(new Event('change'));
-
-    formPagamento.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const vendas = JSON.parse(localStorage.getItem('vendas')) || [];
-      vendas.push({ ...dados, assento });
-      localStorage.setItem('vendas', JSON.stringify(vendas));
-      localStorage.removeItem('passagem');
-      localStorage.removeItem('assento');
-      msgPagamento.style.color = "green";
-      msgPagamento.textContent = "Pagamento confirmado! Passagem comprada com sucesso.";
-      setTimeout(() => window.location.href = "minhas-viagens.html", 1200);
-      
-    });
-  </script>
-    <script src="../js/pagamento.js"></script>
+  <script src="../js/pagamento.js"></script>
 </body>
 </html>
