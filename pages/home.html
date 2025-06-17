@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel - Sistema de Vendas</title>
+  <link rel="stylesheet" href="../css/css.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <img src="../img/imagem-removebg-preview.png" alt="Logo" class="logo" />
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="busca-passagens.html">Vender Passagem</a></li>
+          <li><a href="minhas-viagens.html">Minhas Vendas</a></li>
+          <li><a href="admin.html">Painel Administrativo</a></li>
+          <li><a href="configuracoes.html">Configurações</a></li>
+          <li><a href="../index.html" id="logout">Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="dashboard">
+      <h1 id="welcome-text">Bem-vindo, Vendedor</h1>
+
+      <div class="stats-container">
+        <div class="stat-card">
+          <h3>Vendas Hoje</h3>
+          <p class="stat-value">24</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Vendas Este Mês</h3>
+          <p class="stat-value">356</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Valor Arrecadado</h3>
+          <p class="stat-value">R$ 12.458,00</p>
+        </div>
+      </div>
+
+      <div class="recent-sales">
+        <h2>Vendas Recentes</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nº</th>
+              <th>Cliente</th>
+              <th>Origem</th>
+              <th>Destino</th>
+              <th>Data</th>
+              <th>Valor</th>
+              <th>Contatos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#MT20230001</td>
+              <td>João Silva</td>
+              <td>Cuiabá</td>
+              <td>Rondonópolis</td>
+              <td>15/05/2023</td>
+              <td>R$ 120,00</td>
+            </tr>
+            <tr>
+              <td>#MT20230002</td>
+              <td>Maria Oliveira</td>
+              <td>Sinop</td>
+              <td>Cuiabá</td>
+              <td>16/05/2023</td>
+              <td>R$ 150,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+<footer class="footer">
+  <p>
+    Sistema de Venda de Passagens &copy; 2025 – Mato Grosso<br>
+    <a href="contato.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Contato</a> |
+    <a href="sobre.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Sobre</a> |
+    <a href="termos.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Termos</a>
+  </p>
+</footer>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/script.js"></script>
+  <script>
+    const nomeUsuario = localStorage.getItem('usuario');
+    if (nomeUsuario) {
+      document.getElementById('welcome-text').textContent = `Bem-vindo, ${nomeUsuario}`;
+    }
+
+    // Redirecionamento simples para a tela de login
+    document.getElementById('logout').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.href = '../index.html';
+    });
+  </script>
+</body>
+</html>

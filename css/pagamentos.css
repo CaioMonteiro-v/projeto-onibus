@@ -1,0 +1,118 @@
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.resumo, .pagamento-form {
+    margin-bottom: 30px;
+}
+
+.resumo p {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.pagamento-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.pagamento-form input,
+.pagamento-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.btn-confirmar {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #27ae60;
+    color: blue;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-confirmar:hover {
+    background-color: #219150;
+}
+
+.qr-code {
+    display: block;
+    margin: 20px auto;
+    max-width: 250px;
+}
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 32px 36px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.resumo p {
+  margin: 8px 0;
+  font-size: 1.08em;
+}
+.pagamento-form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.pagamento-form label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.pagamento-form input, .pagamento-form select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 1em;
+  margin-bottom: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.pagamento-form .linha-campos {
+  display: flex;
+  gap: 12px;
+}
+.pagamento-form .linha-campos input,
+.pagamento-form .linha-campos select {
+  flex: 1;
+  margin-bottom: 0;
+}
+.btn-confirmar {
+  background: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.btn-confirmar:hover {
+  background: #1a5a8a;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 16px 8px;
+  }
+  .pagamento-form .linha-campos {
+    flex-direction: column;
+    gap: 0;
+  }
+}

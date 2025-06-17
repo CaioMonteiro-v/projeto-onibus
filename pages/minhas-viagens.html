@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minhas Vendas - Sistema de Passagens</title>
+  <link rel="stylesheet" href="../css/css.css" />
+  <link rel="stylesheet" href="../css/minhas-viagens.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <img src="../img/imagem-removebg-preview.png" alt="Logo" class="logo" />
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="busca-passagens.html">Vender Passagem</a></li>
+          <li><a href="minhas-viagens.html" class="active">Minhas Vendas</a></li>
+          <li><a href="#" id="logout">Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="minhas-vendas">
+      <div class="page-header">
+        <h1><i class="fas fa-receipt"></i> Minhas Vendas</h1>
+        <div class="filtros">
+          <div class="filtro-group">
+            <label for="data-inicio">Data Início:</label>
+            <input type="date" id="data-inicio" />
+          </div>
+          <div class="filtro-group">
+            <label for="data-fim">Data Fim:</label>
+            <input type="date" id="data-fim" />
+          </div>
+          <button class="btn-filtrar" id="btn-filtrar">Filtrar</button>
+          <button class="btn-exportar" id="btn-exportar">Exportar</button>
+        </div>
+      </div>
+
+      <div class="resumo-vendas">
+        <div class="resumo-card">
+          <h3>Total Arrecadado</h3>
+          <p class="valor" id="total-arrecadado">R$ 0,00</p>
+        </div>
+        <div class="resumo-card">
+          <h3>Passagens Vendidas</h3>
+          <p class="valor" id="total-passagens">0</p>
+        </div>
+        <div class="resumo-card">
+          <h3>Média por Venda</h3>
+          <p class="valor" id="media-venda">R$ 0,00</p>
+        </div>
+      </div>
+
+      <div class="tabela-vendas">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Cliente</th>
+              <th>Origem</th>
+              <th>Destino</th>
+              <th>Data</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Linhas serão inseridas aqui pelo JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="paginacao" id="paginacao">
+        <!-- Botões de página se implementados -->
+      </div>
+    </section>
+  </main>
+
+ <footer class="footer">
+  <p>
+    Sistema de Venda de Passagens &copy; 2025 – Mato Grosso<br>
+    <a href="contato.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Contato</a> |
+    <a href="sobre.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Sobre</a> |
+    <a href="termos.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Termos</a>
+  </p>
+</footer>
+
+  <!-- Somente o script de vendas -->
+  <script src="../js/minhas-viagens.js"></script>
+</body>
+</html>

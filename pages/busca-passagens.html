@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Passagens - MT</title>
+    <link rel="stylesheet" href="../css/css.css">
+    <link rel="stylesheet" href="../css/busca.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <img src="../img/imagem-removebg-preview.png" alt="Logo" class="logo">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="busca-passagens.html" class="active">Vender Passagem</a></li>
+                    <li><a href="minhas-viagens.html">Minhas Vendas</a></li>
+                    <li><a href="#" id="logout">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="busca-passagens">
+            <div class="search-header">
+                <h1>Encontre Sua Viagem</h1>
+                <p>Descubra as melhores rotas em Mato Grosso</p>
+            </div>
+
+            <form id="buscaForm" class="busca-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="origem">Origem:</label>
+                        <input type="text" id="origem" placeholder="Ex: Cuiabá">
+                    </div>
+                    <div class="form-group">
+                        <label for="destino">Destino:</label>
+                        <input type="text" id="destino" placeholder="Ex: Rondonópolis">
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Data da Viagem:</label>
+                        <input type="date" id="data">
+                    </div>
+                </div>
+                <button type="submit" class="btn-buscar">Buscar Passagens</button>
+            </form>
+
+            <div id="resultados" class="resultados-busca">
+                <h2>Resultados da Busca</h2>
+                <div class="passagens-list">
+                    <div class="passagem-card">
+                        <div class="passagem-info">
+                            <h3>Cuiabá → Rondonópolis</h3>
+                            <p>Data: 27/05/2025 - 14:00</p>
+                            <p>Empresa: Expresso MT</p>
+                        </div>
+                        <div class="passagem-preco">R$ 120,00</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+
+                    <div class="passagem-card">
+                        <div class="passagem-info">
+                            <h3>Sinop → Cuiabá</h3>
+                            <p>Data: 28/05/2025 - 08:00</p>
+                            <p>Empresa: Rotas do Norte</p>
+                        </div>
+                        <div class="passagem-preco">R$ 150,00</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <footer class="footer">
+  <p>
+    Sistema de Venda de Passagens &copy; 2025 – Mato Grosso<br>
+    <a href="contato.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Contato</a> |
+    <a href="sobre.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Sobre</a> |
+    <a href="termos.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Termos</a>
+  </p>
+</footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/passagens.js"></script>
+</body>
+</html>

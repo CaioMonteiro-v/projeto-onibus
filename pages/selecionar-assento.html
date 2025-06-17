@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar Assento</title>
+    <link rel="stylesheet" href="../css/css.css">
+    <link rel="stylesheet" href="../css/selecionar-assento.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Selecione seu assento</h2>
+        <div class="assentos" id="assentos">
+            <!-- Assentos gerados via JS -->
+        </div>
+        <div class="resumo">
+            <p id="info"></p>
+            <p>Assento Selecionado: <span id="selecionado">Nenhum</span></p>
+            <button id="confirmar">Continuar para Pagamento</button>
+        </div>
+    </div>
+
+    <script>
+        const totalAssentos = 20;
+        const assentosOcupados = [3, 7, 12]; 
+        const assentosContainer = document.getElementById('assentos');
+        const selecionadoSpan = document.getElementById('selecionado');
+        const info = document.getElementById('info');
+
+        const passagem = JSON.parse(localStorage.getItem('passagem'));
+
+        if (passagem) {
+            info.innerHTML = `<strong>${passagem.origem}</strong> → <strong>${passagem.destino}</strong><br>Empresa: ${passagem.empresa} - ${passagem.data} ${passagem.horario}<br>Valor: R$ ${passagem.preco}`;
+        }
+
+        let assentoSelecionado = null;
+
+        for (let i = 1; i <= totalAssentos; i++) {
+            const div = document.createElement('div');
+            div.className = 'assento';
+            div.textContent = i;
+
+            if (assentosOcupados.includes(i)) {
+                div.classList.add('ocupado');
+            } else {
+                div.addEventListener('click', () => {
+                    document.querySelectorAll('.assento').forEach(a => a.classList.remove('selecionado'));
+                    div.classList.add('selecionado');
+                    assentoSelecionado = i;
+                    selecionadoSpan.textContent = i;
+                });
+            }
+
+            assentosContainer.appendChild(div);
+        }
+
+        document.getElementById('confirmar').addEventListener('click', () => {
+            if (!assentoSelecionado) {
+                alert("Selecione um assento antes de continuar.");
+                return;
+            }
+
+            // Salvar assento e seguir para pagamento
+            localStorage.setItem('assento', assentoSelecionado);
+            window.location.href = "pagamento.html";
+        });
+    </script>
+    <script src="../js/selecionar-assento.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato e Suporte - Sistema de Passagens</title>
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <style>
+    /* Estilos específicos para a página de contato */
+    .main-container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    
+    .contact-section {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .contact-card {
+      background: #f9f9f9;
+      border-radius: 6px;
+      padding: 20px;
+      border-left: 4px solid #3498db;
+    }
+    
+    .contact-card h3 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+    
+    #formContato {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    #formContato input,
+    #formContato textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    
+    #formContato textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .btn-enviar {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      align-self: flex-start;
+    }
+    
+    .btn-enviar:hover {
+      background-color: #2980b9;
+    }
+    
+    .success-message {
+      display: none;
+      background: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-container container">
+      <img src="../img/imagem-removebg-preview.png" alt="Logo" class="logo" />
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="vender-passagem.html">Vender Passagem</a></li>
+          <li><a href="minhas-vendas.html">Minhas Vendas</a></li>
+          <li><a href="painel-admin.html">Painel Administrativo</a></li>
+          <li><a href="configuracoes.html">Configurações</a></li>
+          <li><a href="#" id="logout">Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="contact-section">
+      <h1>Fale Conosco</h1>
+      
+      <div class="contact-info">
+        <div class="contact-card">
+          <h3>Informações de Contato</h3>
+          <p><strong>Email:</strong> contato@passagensmt.com.br</p>
+          <p><strong>Telefone:</strong> (65) 1234-5678</p>
+          <p><strong>Horário:</strong> Seg-Sex: 8h às 18h</p>
+        </div>
+        
+        <div class="contact-card">
+          <h3>Suporte Técnico</h3>
+          <p><strong>Email:</strong> suporte@passagensmt.com.br</p>
+          <p><strong>Telefone:</strong> (65) 9876-5432</p>
+          <p><strong>Plantão:</strong> 24h para emergências</p>
+        </div>
+      </div>
+      
+      <form id="formContato">
+        <input type="text" id="nome" placeholder="Seu nome completo" required />
+        <input type="email" id="email" placeholder="Seu e-mail (exemplo@dominio.com)" required />
+        <select id="assunto" required>
+          <option value="">Selecione o assunto...</option>
+          <option value="duvida">Dúvida</option>
+          <option value="sugestao">Sugestão</option>
+          <option value="problema">Problema técnico</option>
+          <option value="outro">Outro</option>
+        </select>
+        <textarea id="mensagem" placeholder="Descreva sua dúvida, sugestão ou problema..." required></textarea>
+        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+      </form>
+      
+      <div id="successMessage" class="success-message">
+        Mensagem enviada com sucesso! Retornaremos em até 24 horas.
+      </div>
+    </section>
+  </main>
+
+ <footer class="footer">
+  <p>
+    Sistema de Venda de Passagens &copy; 2025 – Mato Grosso<br>
+    <a href="contato.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Contato</a> |
+    <a href="sobre.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Sobre</a> |
+    <a href="termos.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Termos</a>
+  </p>
+</footer>
+
+  <script>
+    document.getElementById('formContato').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simular envio do formulário
+      const successMessage = document.getElementById('successMessage');
+      successMessage.style.display = 'block';
+      
+      // Rolagem suave para a mensagem de sucesso
+      successMessage.scrollIntoView({ behavior: 'smooth' });
+      
+      // Resetar formulário após 3 segundos
+      setTimeout(() => {
+        this.reset();
+        successMessage.style.display = 'none';
+      }, 5000);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            padding: 30px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .assentos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .assento {
+            width: 100%;
+            padding: 15px 0;
+            background-color: #ddd;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .assento:hover {
+            background-color: #ccc;
+        }
+        .assento.selecionado {
+            background-color: #2ecc71;
+            color: white;
+        }
+        .assento.ocupado {
+            background-color: #e74c3c;
+            color: white;
+            cursor: not-allowed;
+        }
+        .resumo {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }

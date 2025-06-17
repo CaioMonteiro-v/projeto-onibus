@@ -1,0 +1,55 @@
+ .confirmacao-container {
+      max-width: 500px;
+      margin: 80px auto 0 auto;
+      background: #fff;
+      padding: 40px 36px 32px 36px;
+      border-radius: 14px;
+      box-shadow: 0 6px 32px rgba(44, 62, 80, 0.10);
+      text-align: center;
+    }
+    .confirmacao-container h1 {
+      font-size: 2rem;
+      color: #2980b9;
+      margin-bottom: 18px;
+    }
+    .confirmacao-container p {
+      font-size: 1.15em;
+      margin-bottom: 24px;
+      color: #222;
+    }
+    .btn-voltar {
+      background: #2980b9;
+      color: #fff;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.08em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .btn-voltar:hover {
+      background: #1a5a8a;
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer {
+      background: #2c3e50;
+      color: #fff;
+      padding: 18px 0;
+      text-align: center;
+      font-size: 1em;
+      margin-top: 40px;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: underline;
+      margin: 0 10px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer a:hover {
+      color: #2980b9;
+    }

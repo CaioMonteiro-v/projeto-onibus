@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - Sistema de Passagens</title>
+  <link rel="stylesheet" href="css/css.css" />
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-header">
+      <img src="img/imagem-removebg-preview.png" alt="Logo" class="login-logo" />
+      <h1>Login</h1>
+    </div>
+    <form id="loginForm" class="login-form">
+      <div class="form-group">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" placeholder="Digite seu usuário" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" placeholder="Digite sua senha" required />
+      </div>
+      <button type="submit" class="btn-login">Entrar</button>
+      <p class="login-footer">
+        <a href="recuperar-senha.html">Esqueci minha senha</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

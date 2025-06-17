@@ -1,0 +1,114 @@
+
+    .admin-dashboard {
+      max-width: 900px;
+      margin: 40px auto 0 auto;
+      background: #fff;
+      padding: 36px 40px 32px 40px;
+      border-radius: 14px;
+      box-shadow: 0 6px 32px rgba(44, 62, 80, 0.08);
+      text-align: center;
+    }
+    .admin-dashboard h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #223;
+      margin-bottom: 32px;
+      letter-spacing: 1px;
+    }
+    .admin-resumos {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .admin-card {
+      flex: 1 1 200px;
+      background: #f4f8fb;
+      border-radius: 12px;
+      padding: 28px 18px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      min-width: 180px;
+      margin: 0 8px;
+      transition: box-shadow 0.2s;
+    }
+    .admin-card:hover {
+      box-shadow: 0 4px 16px rgba(44, 62, 80, 0.13);
+    }
+    .admin-card h3 {
+      font-size: 1.1em;
+      color: #2980b9;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .admin-card p {
+      font-size: 2.2em;
+      color: #2c3e50;
+      margin: 0;
+      font-weight: bold;
+    }
+    .admin-card::before {
+      display: block;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      color: #2980b9;
+    }
+    .admin-card:nth-child(1)::before { content: "\f145"; } /* fa-ticket-alt */
+    .admin-card:nth-child(2)::before { content: "\f0c0"; } /* fa-users */
+    .admin-card:nth-child(3)::before { content: "\f207"; } /* fa-bus */
+    .admin-links {
+      margin-top: 16px;
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .admin-link {
+      background: #2980b9;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.08em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    }
+    .admin-link:hover {
+      background: #1a5a8a;
+      text-decoration: none;
+    }
+    @media (max-width: 900px) {
+      .admin-dashboard {
+        padding: 18px 4vw 18px 4vw;
+      }
+      .admin-resumos {
+        flex-direction: column;
+        gap: 18px;
+      }
+    }
+    .footer {
+      background: #2c3e50;
+      color: #fff;
+      padding: 18px 0;
+      text-align: center;
+      font-size: 1em;
+      margin-top: 40px;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: underline;
+      margin: 0 10px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer a:hover {
+      color: #2980b9;
+    }
+  

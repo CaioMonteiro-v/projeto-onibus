@@ -1,0 +1,46 @@
+.sobre-container {
+      max-width: 700px;
+      margin: 48px auto 0 auto;
+      background: #fff;
+      padding: 36px 40px 32px 40px;
+      border-radius: 14px;
+      box-shadow: 0 6px 32px rgba(44, 62, 80, 0.08);
+    }
+    .sobre-container h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #223;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+    }
+    .sobre-container ul {
+      margin-top: 18px;
+      margin-bottom: 0;
+      padding-left: 22px;
+      font-size: 1.08em;
+    }
+    .sobre-container li {
+      margin-bottom: 10px;
+    }
+    .sobre-container p {
+      font-size: 1.08em;
+      margin-bottom: 10px;
+    }
+    .footer {
+      background: #2c3e50;
+      color: #fff;
+      padding: 18px 0;
+      text-align: center;
+      font-size: 1em;
+      margin-top: 40px;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: underline;
+      margin: 0 10px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer a:hover {
+      color: #2980b9;
+    }

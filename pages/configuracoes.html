@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configurações de Perfil</title>
+  <link rel="stylesheet" href="../css/css.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/configuracoes.css" />
+  
+</head>
+<body>  
+  <header class="header">
+    <div class="header-container container">
+      <img src="../img/imagem-removebg-preview.png" alt="Logo" class="logo" />
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="configuracoes.html" class="active">Configurações</a></li>
+          <li><a href="#" id="logout">Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="configuracoes-section">
+      <h1>Configurações de Perfil</h1>
+      
+      <div class="info-card" style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 6px;">
+        <h3>Informações da Conta</h3>
+      </div>
+      
+      <form id="form-config">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" required placeholder="Digite seu nome completo" />
+        </div>
+        
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" required placeholder="seu@email.com" />
+        </div>
+        
+        <div class="form-group">
+          <label for="senha">Nova Senha:</label>
+          <input type="password" id="senha" minlength="6" placeholder="Mínimo 6 caracteres" />
+          <small style="color: #7f8c8d; display: block; margin-top: 5px;">Deixe em branco para manter a senha atual</small>
+        </div>
+        
+        <button type="submit" class="btn-login">Salvar Alterações</button>
+      </form>
+      
+      <div id="msg-config"></div>
+    </section>
+  </main>
+<footer class="footer">
+  <p>
+    Sistema de Venda de Passagens &copy; 2025 – Mato Grosso<br>
+    <a href="contato.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Contato</a> |
+    <a href="sobre.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Sobre</a> |
+    <a href="termos.html" style="color: #fff; text-decoration: underline; margin: 0 8px;">Termos</a>
+  </p>
+</footer>
+  <script src="../js/configuracoes.js"></script>
+</body>
+</html>

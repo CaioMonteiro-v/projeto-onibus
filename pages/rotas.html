@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerenciar Rotas</title>
+  <link rel="stylesheet" href="../css/css.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/rotas.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-container container">
+      <img src="../img/imagem-removebg-preview.png" alt="Logo" class="logo" />
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="admin.html">Painel</a></li>
+          <li><a href="usuarios.html">Usuários</a></li>
+          <li><a href="rotas.html" class="active">Rotas</a></li>
+          <li><a href="relatorios.html">Relatórios</a></li>
+          <li><a href="home.html">Home</a></li>
+           <li><a href="../index.html" id="logout">Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+<div id="modalRota" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.3); align-items:center; justify-content:center; z-index:1000;">
+  <div style="background:#fff; padding:24px; border-radius:8px; min-width:300px; max-width:90vw; position:relative;">
+    <h3 id="modalTituloRota" style="color:#222;">Nova Rota</h3>
+    <form id="formRota">
+      <input type="hidden" id="rotaId" />
+      <div style="margin-bottom:10px;">
+        <label style="color:#222;">Origem:</label>
+        <input type="text" id="rotaOrigem" required style="width:100%;" />
+      </div>
+      <div style="margin-bottom:10px;">
+        <label style="color:#222;">Destino:</label>
+        <input type="text" id="rotaDestino" required style="width:100%;" />
+      </div>
+      <div style="margin-bottom:10px;">
+        <label style="color:#222;">Preço:</label>
+        <input type="number" id="rotaPreco" required min="0" step="0.01" style="width:100%;" />
+      </div>
+      <button type="submit" style="background:#2980b9; color:#fff; border:none; padding:8px 18px; border-radius:6px; font-weight:bold;">Salvar</button>
+      <button type="button" id="fecharModalRota" style="margin-left:10px;">Cancelar</button>
+    </form>
+  </div>
+</div>
+  </header>
+  <main class="container">
+    <section class="admin-section">
+      <h1><i class="fas fa-road"></i> Gerenciar Rotas</h1>
+      <button id="btn-add-rota"><i class="fas fa-plus"></i> Nova Rota</button>
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Origem</th>
+            <th>Destino</th>
+            <th>Preço</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+   
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>
+      Sistema de Venda de Passagens &copy; 2025 – Mato Grosso<br>
+      <a href="contato.html">Contato</a> |
+      <a href="sobre.html">Sobre</a> |
+      <a href="termos.html">Termos</a>
+    </p>
+  </footer>
+  <script src="../js/rotas.js"></script>
+</body>
+</html>
